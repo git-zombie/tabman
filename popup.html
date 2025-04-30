@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 10px; width: 300px; }
+    input[type="text"] { width: 100%; padding: 6px; margin-bottom: 10px; box-sizing: border-box; }
+    .domain { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; }
+    .domain-name { cursor: pointer; text-decoration: underline; color: blue; flex-grow: 1; }
+    .domain-name:hover::after { content: attr(data-title); display: block; font-size: 10px; color: #666; }
+    .domain button { margin-left: 10px; }
+    #header { display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h3 style="margin: 0;">Tabs by Domain</h3>
+    <span id="totalTabs" style="font-weight: bold;"></span>
+  </div>
+  <input type="text" id="searchInput" placeholder="Search domains...">
+  <div id="domainList">Loading...</div>
+  <script src="popup.js"></script>
+</body>
+</html>
